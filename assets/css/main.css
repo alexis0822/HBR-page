@@ -2691,25 +2691,28 @@ input, select, textarea {
 /* Services Section Styles */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2em;
-    padding: 2em 0;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+    padding: 1.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Replace or update the existing .service-item styles */
 .service-item {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px; /* Rounded edges */
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 2em;
+    padding: 1.5em;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 1em;
-    min-height: 300px; /* Fixed height for consistency */
+    min-height: 250px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .service-item:hover {
@@ -2736,21 +2739,17 @@ input, select, textarea {
     color: #666;
 }
 
-/* Update the grid layout */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2em;
-    padding: 2em 0;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Responsive adjustments */
 @media screen and (max-width: 736px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 1em;
+        gap: 1em;
+    }
+    
     .service-item {
-        min-height: 250px;
-        padding: 1.5em;
+        min-height: auto;
+        padding: 1.25em;
+        margin: 0;
     }
 }
 
