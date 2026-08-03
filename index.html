@@ -1,340 +1,561 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Healthy Body Rehab</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Healthy Body Rehab offers professional athletic training, injury prevention, rehabilitation, and performance enhancement services by Etienne Ayende in Puerto Rico." />
-		<meta name="keywords" content="athletic trainer, sports rehab, injury prevention, performance enhancement, Puerto Rico, Etienne Ayende, compression boots, cupping, stretching, recovery" />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet"/>
-		<link rel="icon" type="image/jpeg" href="images/eti_logo.JPG">
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Healthy Body Rehab — Etienne Ayende, Athletic Trainer</title>
+<meta name="description" content="Athletic training, injury prevention, rehabilitation and performance enhancement with Etienne Ayende in Puerto Rico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="images/eti_logo.JPG">
+<style>
+  :root{
+    --ink:#12181d;
+    --ink-2:#1b2329;
+    --paper:#f1f4f2;
+    --paper-2:#e7ebe8;
+    --line:#d7ddda;
+    --line-strong:#b9c2be;
+    --muted:#5c6b66;
+    --muted-2:#8f9c97;
+    --pulse:#005dbb;
+    --pulse-bright:#0081e4;
+    --ignite:#009e20;
+    --white:#ffffff;
+    --radius:2px;
+    --wrap:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--pulse);font-weight:500;}
+  h1,h2,h3{font-family:'Bebas Neue',sans-serif;letter-spacing:.01em;margin:0;line-height:.95;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+    padding:15px 26px;border-radius:var(--radius);text-decoration:none;font-weight:500;
+    border:1px solid transparent;transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-solid{background:var(--pulse);color:var(--ink);}
+  .btn-solid:hover{background:var(--pulse-bright);}
+  .btn-ghost{border-color:rgba(241,244,242,.35);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--pulse-bright);color:var(--pulse-bright);}
+  .btn-ghost-dark{border-color:var(--line-strong);color:var(--ink);}
+  .btn-ghost-dark:hover{border-color:var(--pulse);color:var(--pulse);}
 
-		<!-- Header -->
-			<div id="header">
-				<div class="top">
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(241,244,242,.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;transition:border-color .25s ease, background .25s ease;
+  }
+  header.scrolled{border-color:var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--wrap);margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .brand-badge{
+    width:40px;height:40px;background:var(--ink);color:var(--pulse-bright);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.03em;border-radius:var(--radius);
+  }
+  .brand-text{display:flex;flex-direction:column;line-height:1.05;}
+  .brand-text b{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.03em;}
+  .brand-text span{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;}
+  nav.links{display:flex;align-items:center;gap:34px;}
+  nav.links a{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    text-decoration:none;color:var(--muted);position:relative;padding-bottom:4px;
+  }
+  nav.links a:hover{color:var(--ink);}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--pulse);transition:width .2s ease;}
+  nav.links a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:22px;}
+  .icon-link{color:var(--muted);display:flex;}
+  .icon-link:hover{color:var(--pulse);}
+  .nav-toggle{display:none;}
 
-					<!-- Logo in Sidebar -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/eti_logo.JPG" alt="" /></span>
-							<h1 id="title">Healthy Body Rehab</h1>
-							<p>by Etienne Ayende - Athletic Trainer</p>
-						</div>
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;background:var(--ink);color:var(--paper);overflow:hidden;
+    padding:120px 0 90px;
+  }
+  .hero-grid{
+    position:absolute;inset:0;opacity:.5;
+    background-image:
+      linear-gradient(rgba(241,244,242,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(241,244,242,.05) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(ellipse at 65% 35%, black 10%, transparent 68%);
+  }
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .95fr;gap:60px;align-items:end;}
+  .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:26px;}
+  .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--ignite);}
+  .hero h1{font-size:clamp(48px,6.6vw,92px);color:var(--white);}
+  .hero h1 em{font-style:normal;color:var(--pulse-bright);}
+  .hero p.lead{font-size:17px;line-height:1.65;color:#c4cdc9;max-width:46ch;margin:26px 0 36px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-side{border-left:1px solid rgba(241,244,242,.18);padding-left:34px;}
+  .hero-side .stat{padding:18px 0;border-bottom:1px solid rgba(241,244,242,.14);}
+  .hero-side .stat:last-child{border-bottom:none;}
+  .hero-side .stat b{display:block;font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--pulse-bright);}
+  .hero-side .stat span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9fada7;}
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
-								<li><a href="#services" id="services-link"><span class="icon solid fa-list">Services</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#faq" id="about-link"><span class="icon solid fa-question">FAQ</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+  .pulse-strip{position:relative;height:64px;background:var(--ink);overflow:hidden;}
+  .pulse-strip svg{position:absolute;top:0;left:0;width:200%;height:100%;}
+  .pulse-strip path{fill:none;stroke:var(--pulse);stroke-width:1.6;opacity:.75;}
+  .pulse-strip .run{animation:run 9s linear infinite;}
+  @keyframes run{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-				</div>
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:110px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:64px;}
+  .section-head h2{font-size:clamp(34px,4vw,54px);}
+  .section-head p{color:var(--muted);max-width:38ch;font-size:15px;line-height:1.6;margin-top:10px;}
 
-				<div class="bottom">
+  /* ---------- SERVICES ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .service-card{background:var(--paper);padding:38px 32px;transition:background .2s ease;}
+  .service-card:hover{background:var(--white);}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:26px;}
+  .code-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--ignite);border:1px solid rgba(255,90,54,.35);padding:4px 8px;border-radius:var(--radius);}
+  .service-card svg{width:30px;height:30px;stroke:var(--ink);stroke-width:1.4;fill:none;}
+  .service-card .service-icon{width:36px;height:36px;object-fit:contain;display:block;flex-shrink:0;margin:0;}
+  .service-card h3{font-size:24px;margin-bottom:12px;letter-spacing:.02em;}
+  .service-card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.6;}
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://www.instagram.com/healthybodyrehab/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="mailto:ayendeetienne@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							<li><a href="https://wa.me/17872381707?text=Hi,%20I%27m%20interested%20in%20your%20services" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
-						</ul>
-				</div>
-			</div>
-			
-		<!-- Main -->
-			<div id="main">
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--paper-2);}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;}
+  .id-card{background:var(--ink);color:var(--paper);border-radius:var(--radius);overflow:hidden;position:sticky;top:110px;align-self:start;}
+  .id-photo{aspect-ratio:4/5;overflow:hidden;}
+  .id-photo img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(15%);}
+  .id-body{padding:28px 26px 30px;}
+  .id-body .role{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--pulse-bright);margin-bottom:8px;}
+  .id-body h3{font-size:30px;color:var(--white);margin-bottom:18px;}
+  .id-facts{border-top:1px solid rgba(241,244,242,.16);padding-top:16px;display:grid;gap:12px;}
+  .id-facts div{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;font-size:12.5px;}
+  .id-facts span:first-child{font-family:'IBM Plex Mono',monospace;color:#9fada7;letter-spacing:.05em;text-transform:uppercase;flex-shrink:0;}
+  .id-facts span:last-child{text-align:right;max-width:60%;color:#dfe6e2;flex:1;}
 
-				<!-- Intro -->
-				<section id="top" class="one dark cover">
-					<div id="particles-js"></div>
-					<div class="container">
-						<header>
-							<h2 class="alt rise-animation"><strong>Healthy Body Rehab</strong>, by Etienne Ayende</h2>
-							<p class="rise-animation rise-delay-1">As an athletic trainer, my goal is to help you prevent injuries, 
-								recover stronger, and perform at your peak. Whether you're an athlete, coach, or fitness enthusiast, 
-								I'm here to support your journey with personalized care and expert guidance.</p>
-						</header>
-						<footer>
-							<a href="#services" class="button scrolly rise-animation rise-delay-2">Click to see more</a>
-						</footer>
-					</div>
-				</section>
-    
+  .about-copy p{font-size:15.5px;line-height:1.75;color:var(--ink);max-width:62ch;margin:0 0 20px;}
+  .about-copy p:first-of-type{font-size:19px;line-height:1.6;color:var(--ink);font-weight:500;}
+  .about-copy b{color:var(--ink);}
 
-					<!-- Services -->
-					<section id="services" class="five">
-						<div class="container">
-							<header>
-								<h2>Services</h2>
-							</header>
+  .gallery{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .gallery figure{margin:0;position:relative;overflow:hidden;border-radius:var(--radius);background:var(--ink);}
+  .gallery figure:nth-child(3n+1){grid-row:span 2;}
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .gallery figure:hover img{transform:scale(1.06);}
+  .logo-bar{padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper);overflow:hidden;}
+  .logo-bar .eyebrow{display:block;text-align:center;margin-bottom:36px;}
+  .logo-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg, transparent, black 10%, black 90%, transparent);mask-image:linear-gradient(90deg, transparent, black 10%, black 90%, transparent);}
+  .logo-track{display:flex;align-items:center;gap:64px;width:max-content;--set-width:900px;animation:logo-scroll-right 28s linear infinite;}
+  .logo-track img{height:54px;width:auto;max-width:160px;object-fit:contain;flex-shrink:0;filter:grayscale(100%);opacity:.55;transition:filter .25s ease, opacity .25s ease, transform .2s ease;}
+  .logo-track img:hover{filter:grayscale(0%);opacity:1;transform:translateY(-2px);}
+  @keyframes logo-scroll-right{from{transform:translateX(calc(-1 * var(--set-width)));}to{transform:translateX(0);}}
+  .gallery figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:12px 14px;
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.5;color:var(--white);
+    background:linear-gradient(0deg, rgba(18,24,29,.92), transparent);
+  }
 
-							<p>Professional athletic training services tailored to your needs:</p>
+  /* ---------- FAQ ---------- */
+  .faq-list{border-top:1px solid var(--line);max-width:820px;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    display:flex;justify-content:space-between;align-items:center;gap:20px;
+    padding:26px 4px;cursor:pointer;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.01em;
+  }
+  .faq-q .idx{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted-2);margin-right:16px;letter-spacing:.05em;}
+  .faq-q .toggle{font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--pulse);flex-shrink:0;transition:transform .25s ease;}
+  .faq-item.open .toggle{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-a p{margin:0 0 26px 4px;color:var(--muted);font-size:15px;line-height:1.7;max-width:64ch;padding-left:36px;}
 
-							<div class="services-grid">
-								<div class="service-item">
-									<span class="icon solid fa-heartbeat"></span>
-									<h3>Athletic Assessments</h3>
-									<p>Personalized analysis to identify muscle imbalances, weaknesses, and areas for improvement in physical performance, aimed at athletes and active individuals.</p>
-								</div>
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--ink);color:var(--paper);}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;}
+  .contact h2{color:var(--white);font-size:clamp(34px,4vw,52px);margin-bottom:20px;}
+  .contact p.lead{color:#c4cdc9;font-size:16px;line-height:1.7;max-width:44ch;margin-bottom:38px;}
+  .contact-methods{display:grid;gap:0;border-top:1px solid rgba(241,244,242,.16);}
+  .contact-methods a{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 2px;border-bottom:1px solid rgba(241,244,242,.16);text-decoration:none;color:var(--paper);
+    font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;
+  }
+  .contact-methods a span.arrow{color:var(--pulse);transition:transform .2s ease;}
+  .contact-methods a:hover span.arrow{transform:translateX(6px);}
+  .contact-methods a:hover{color:var(--pulse-bright);}
 
-								<div class="service-item">
-									<span class="icon solid fa-running"></span>
-									<h3>Passive Stretching</h3>
-									<p>Manual technique where the therapist mobilizes the client's joints and muscles to improve flexibility and reduce accumulated tension.</p>
-								</div>
+  .form-panel{background:var(--ink-2);border:1px solid rgba(241,244,242,.14);padding:38px;border-radius:var(--radius);}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9fada7;}
+  .field input, .field textarea{
+    background:transparent;border:none;border-bottom:1px solid rgba(241,244,242,.3);
+    color:var(--paper);font-family:'Inter',sans-serif;font-size:15px;padding:8px 2px;outline:none;
+    transition:border-color .2s ease;
+  }
+  .field input:focus, .field textarea:focus{border-color:var(--pulse-bright);}
+  .field textarea{resize:vertical;min-height:80px;font-family:'Inter',sans-serif;}
+  .form-panel .btn{width:100%;justify-content:center;margin-top:8px;}
 
-								<div class="service-item">
-									<span class="icon solid fa-dumbbell"></span>
-									<h3>Rehab / Recovery / Modalities</h3>
-									<p>Personalized physical rehabilitation and muscle recovery sessions using advanced techniques and tools tailored to the client's needs.</p>
-								</div>
+  footer{background:var(--ink);border-top:1px solid rgba(241,244,242,.12);padding:26px 0;}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;color:#8f9c97;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.04em;}
+  .foot-inner a{color:#8f9c97;text-decoration:none;}
+  .foot-inner a:hover{color:var(--pulse-bright);}
 
-								<div class="service-item">
-									<span class="icon solid fa-hands"></span>
-									<h3>Manual Therapy / Cupping</h3>
-									<p>Use of manual massages combined with suction cups (cupping) to relieve muscle tension, improve circulation and reduce chronic pain.</p>
-								</div>
+  :focus-visible{outline:2px solid var(--pulse);outline-offset:3px;}
 
-								<div class="service-item">
-									<span class="icon solid fa-socks"></span>
-									<h3>Compression Boots</h3>
-									<p>Dynamic air compression is used to apply pressure to the body in a rhythmic pattern, mimicking the body's natural muscle pumps. Pressure begins at the point furthest from the heart and gradually increases, promoting blood flow and lymphatic drainage.</p>
-								</div>
+  @media (max-width: 900px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-side{border-left:none;padding-left:0;border-top:1px solid rgba(241,244,242,.18);padding-top:26px;display:flex;gap:28px;}
+    .services-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .id-card{position:static;}
+    .gallery{grid-template-columns:repeat(2,1fr);}
+    .logo-track{gap:36px;}
+    .logo-track img{height:30px;max-width:110px;}
+    .gallery figure:nth-child(3n+1){grid-row:span 1;}
+    .contact-grid{grid-template-columns:1fr;}
+    nav.links{display:none;}
+    .form-row{grid-template-columns:1fr;}
+    .section-head{flex-direction:column;align-items:flex-start;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .pulse-strip .run{animation:none;}
+    .logo-track{animation:none;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
 
-								<div class="service-item">
-									<span class="icon solid fa-clipboard-check"></span>
-									<h3>Event Coverage</h3>
-									<p>Athletic therapy and rehabilitation services to support athletes during competitions, tournaments, and other sporting events.</p>
-								</div>
-							</div>
-						</div>
-					</section>
-		
-				<!-- About Me -->
-				<section id="about" class="three">
-					<div class="container">
-						<header>
-							<h2>About Me</h2>
-						</header>
+<header id="siteHeader">
+  <div class="nav">
+    <a class="brand" href="#top">
+      <img class="brand-badge" src="images/eti_logo.JPG" alt="Healthy Body Rehab logo" style="object-fit:cover;">
+      <div class="brand-text">
+        <b>HEALTHY BODY REHAB</b>
+        <span>Etienne Ayende · Athletic Trainer</span>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="icon-link" href="https://www.instagram.com/healthybodyrehab/" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+      </a>
+      <a class="btn btn-ghost-dark" href="https://wa.me/17872381707?text=Hi,%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener">Book a session</a>
+    </div>
+  </div>
+</header>
 
-						<div class="slideshow-container">
-							<div class="mySlides fade">
-								<img src="images/eti_capi1.JPG" loading="lazy" alt="">
-								<div class="text">Etienne Ayende prepping Juan Pablo Piñeiro from the Capitanes of Arecibo BSN team.</div>
-							</div>
-							
-							<div class="mySlides fade">
-								<img src="images/etipro2.jpg" loading="lazy" alt="">
-								<div class="text">Etienne Ayende participating in a 5k Run event for B-ONE in La Marginal, Arecibo.</div>
-							</div>
-							
-							<div class="mySlides fade">
-								<img src="images/etisolitario.JPG" loading="lazy" alt="">
-								<div class="text">Etienne Ayende participating in the Arsenal Training Camp in Queens, New York.</div>
-							</div>
+<section class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="hero-eyebrow"><span class="dot"></span><span class="eyebrow" style="color:#9fada7">Puerto Rico · Athletic Training &amp; Rehabilitation</span></div>
+      <h1>Train harder.<br>Recover <em>smarter</em>.<br>Play longer.</h1>
+      <p class="lead">Personalized athletic training, injury prevention and recovery — built around how your body actually moves, not a generic program. Working with athletes, coaches and active people who refuse to sit on the sidelines.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#services">See services</a>
+        <a class="btn btn-ghost" href="https://wa.me/17872381707?text=Hi,%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="stat"><b>1:1</b><span>Personalized care, every session</span></div>
+      <div class="stat"><b>Premium Experience</b><span>Trusted by professional athletes</span></div>
+      <div class="stat"><b>6</b><span>Modalities under one roof</span></div>
+    </div>
+  </div>
+</section>
 
-							<div class="mySlides fade">
-								<img src="images/etigrupo.JPG" loading="lazy" alt="">
-								<div class="text">Etienne Ayende participating in the Arsenal Training Camp in Queens, New York.</div>
-							</div>
+<div class="pulse-strip" aria-hidden="true">
+  <svg viewBox="0 0 800 64" preserveAspectRatio="none" class="run">
+    <path d="M0,32 L120,32 L140,10 L160,54 L180,32 L260,32 L280,18 L300,46 L320,32 L800,32"/>
+  </svg>
+  <svg viewBox="0 0 800 64" preserveAspectRatio="none" class="run" style="left:100%;">
+    <path d="M0,32 L120,32 L140,10 L160,54 L180,32 L260,32 L280,18 L300,46 L320,32 L800,32"/>
+  </svg>
+</div>
 
-							<div class="mySlides fade">
-								<img src="images/etigrupo2.JPG" loading="lazy" alt="">
-								<div class="text">Etienne Ayende participating in the PSG Training Camp in Charlotte, North Carolina.</div>
-							</div>
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Built for athletes<br>at every stage.</h2>
+      <p>Six modalities, one plan. Every session is picked to match where you are in training, competition, or recovery.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0 32px;">
+    <div class="services-grid">
 
-							<div class="mySlides fade">
-								<img src="images/port3.PNG" loading="lazy" alt="">
-								<div class="text">Etienne Ayende - Athletic Trainer</div>
-							</div>
+      <div class="service-card">
+        <div class="card-top">
+          <svg viewBox="0 0 24 24"><path d="M4 18 L10 8 L14 14 L20 4"/><circle cx="20" cy="4" r="1.4" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3>Athletic Assessments</h3>
+        <p>A personalized read on your muscle imbalances, weaknesses and movement patterns — so training targets what actually needs work.</p>
+      </div>
 
-							<div class="mySlides fade">
-								<img src="images/david.PNG" loading="lazy" alt="">
-								<div class="text">Etienne Ayende preparing David Stockton, professional BSN player for a game.</div>
-							</div>
+      <div class="service-card">
+        <div class="card-top">
+          <svg viewBox="0 0 24 24"><path d="M6 4 C10 8 10 16 6 20 M12 2 C16 8 16 16 12 22 M18 4 C22 8 22 16 18 20" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Passive Stretching</h3>
+        <p>Hands-on mobilization of your joints and muscles to restore flexibility and release tension you've been carrying around.</p>
+      </div>
 
-							<div class="mySlides fade">
-								<img src="images/zayas.PNG" loading="lazy" alt="">
-								<div class="text">Etienne Ayende training Zayas, a professional BSN player, during a practice session.</div>
-							</div>
+      <div class="service-card">
+        <div class="card-top">
+          <svg viewBox="0 0 24 24"><path d="M12 3 C7 8 4 12 4 15.5 A8 8 0 0 0 20 15.5 C20 12 17 8 12 3Z"/></svg>
+        </div>
+        <h3>Rehab / Recovery / Modalities</h3>
+        <p>Physical rehabilitation and muscle recovery sessions using techniques and tools matched to your specific injury and goals.</p>
+      </div>
 
-							<div class="mySlides fade">
-								<img src="images/eti_con_coach.JPG" loading="lazy" alt="">
-								<div class="text">Etienne with coach Juan Cardona, Head Coach for the Capitanes of Arecibo in the BSN.</div>
-							</div>
+      <div class="service-card">
+        <div class="card-top">
+          <img class="service-icon" src="images/cupping.png" alt="Cupping icon">
+        </div>
+        <h3>Manual Therapy / Cupping</h3>
+        <p>Manual massage paired with cupping to relieve muscle tension, improve circulation and cut down on chronic pain.</p>
+      </div>
 
-							<!-- Navigation dots -->
-							<div class="dots-container">
-								<span class="dot" onclick="currentSlide(1)"></span>
-								<span class="dot" onclick="currentSlide(2)"></span>
-								<span class="dot" onclick="currentSlide(3)"></span>
-								<span class="dot" onclick="currentSlide(4)"></span>
-								<span class="dot" onclick="currentSlide(5)"></span>
-								<span class="dot" onclick="currentSlide(6)"></span>
-								<span class="dot" onclick="currentSlide(7)"></span>
-							</div>
-						</div>
+      <div class="service-card">
+        <div class="card-top">
+          <img class="service-icon" src="images/Diseño sin título (4).png" alt="Compression Boots icon">
+        </div>
+        <h3>Compression Boots</h3>
+        <p>Rhythmic air compression, starting furthest from the heart and building inward, to push blood flow and lymphatic drainage.</p>
+      </div>
+      <div class="service-card">
+        <div class="card-top">
+          <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="1"/><path d="M4 10 L20 10 M8 3 L8 6 M16 3 L16 6"/></svg>
+        </div>
+        <h3>Event Coverage</h3>
+        <p>On-site athletic therapy for competitions, tournaments and training camps — support that travels with the team.</p>
+      </div>
 
-						<p>Etienne Ayende is a passionate and skilled <strong><b>Athletic Trainer</b></strong> with a <strong><b>Bachelor's in Athletic Therapy from the University of Puerto Rico at Ponce.</b></strong>
-							Dedicated to <strong><b>optimizing athlete performance, injury prevention, and rehabilitation</b></strong> with <strong><b>evidence-based techniques.</b></strong>
-							Combines <strong><b>academic excellence</b></strong> with hands-on experience to <strong><b>deliver top-tier sports healthcare.</b></strong></p>
-					</div>
-				</section>
+    </div>
+  </div>
+</section>
 
-				<!-- FAQ section -->
-				<section id="faq" class="six">
-					<div class="container">
-						<header>
-							<h2>Frequently Asked Questions</h2>
-						</header>
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="id-card">
+      <div class="id-photo">
+        <img src="images/port3.PNG" alt="Etienne Ayende, Athletic Trainer">
+      </div>
+      <div class="id-body">
+        <div class="role">Athletic Trainer</div>
+        <h3>Etienne Ayende</h3>
+        <div class="id-facts">
+          <div><span>Education</span><span>B.A. Athletic Therapy, University of Puerto Rico at Ponce</span></div>
+          <div><span>Focus</span><span>Injury prevention, rehab, performance</span></div>
+          <div><span>Approach</span><span>Evidence-based technique</span></div>
+        </div>
+      </div>
+    </div>
 
-						<div class="faq-container">
-							<div class="faq-item">
-								<div class="faq-question">
-									<h3>What should I expect in my first session?</h3>
-									<span class="icon solid fa-chevron-down"></span>
-								</div>
-								<div class="faq-answer">
-									<p>Your first session includes a comprehensive assessment of your condition, medical history review, and discussion of your goals. We'll develop a personalized treatment plan tailored to your needs.</p>
-								</div>
-							</div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px;">About Etienne</div>
+      <div class="about-copy">
+        <p>Etienne combines academic training with years on the sideline — working directly with professional and amateur athletes to keep them moving.</p>
+        <p>He holds a <b>Bachelor's in Athletic Therapy from the University of Puerto Rico at Ponce</b>, and has spent his career pairing that foundation with hands-on experience at the professional level, from BSN basketball to international soccer academies.</p>
+        <p>Every plan is built the same way: assess first, treat what's actually there, and adjust as the athlete progresses — never a one-size-fits-all program.</p>
+      </div>
 
-							<div class="faq-item">
-								<div class="faq-question">
-									<h3>How long are the sessions?</h3>
-									<span class="icon solid fa-chevron-down"></span>
-								</div>
-								<div class="faq-answer">
-									<p>Initial sessions typically last 60-90 minutes to allow for thorough assessment. Follow-up sessions are usually 45-60 minutes, depending on your treatment plan.</p>
-								</div>
-							</div>
+      <div class="gallery">
+        <figure>
+          <img src="images/eti_capi1.JPG" alt="Etienne Ayende prepping Juan Pablo Piñeiro, Capitanes de Arecibo">
+          <figcaption>Prepping J.P. Piñeiro — Capitanes de Arecibo, BSN</figcaption>
+        </figure>
+        <figure>
+          <img src="images/etipro2.jpg" alt="Etienne Ayende at a 5k run event for B-ONE">
+          <figcaption>B-ONE 5K — La Marginal, Arecibo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/david.PNG" alt="Preparing David Stockton for a BSN game">
+          <figcaption>Pre-game prep — David Stockton, BSN</figcaption>
+        </figure>
+        <figure>
+          <img src="images/etisolitario.JPG" alt="Arsenal Training Camp, Queens, New York">
+          <figcaption>Arsenal Training Camp — Queens, NY</figcaption>
+        </figure>
+        <figure>
+          <img src="images/etigrupo2.JPG" alt="PSG Training Camp, Charlotte, North Carolina">
+          <figcaption>PSG Training Camp — Charlotte, NC</figcaption>
+        </figure>
+        <figure>
+          <img src="images/zayas.PNG" alt="Training Zayas, professional BSN player">
+          <figcaption>Session with Zayas — BSN pro</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
 
-							<div class="faq-item">
-								<div class="faq-question">
-									<h3>Do I need a referral?</h3>
-									<span class="icon solid fa-chevron-down"></span>
-								</div>
-								<div class="faq-answer">
-									<p>No referral is required to schedule an appointment. However, if you're working with other healthcare providers, we're happy to collaborate with them for optimal results.</p>
-								</div>
-							</div>
+<section class="logo-bar">
+  <div class="wrap">
+    <span class="eyebrow">Worked alongside</span>
+    <div class="logo-marquee">
+      <div class="logo-track" id="logoTrack">
+        <img src="images/Arsenal_FC.svg" alt="Arsenal FC">
+        <img src="images/BSN_logo.webp" alt="Baloncesto Superior Nacional (BSN)">
+        <img src="images/capitanes.avif" alt="Capitanes de Arecibo">
+        <img src="images/LAI.svg" alt="LAI">
+        <img src="images/Paris_Saint-Germain_F.C..svg" alt="Paris Saint-Germain FC">
+        <img src="images/ponce-sello.png" alt="University of Puerto Rico at Ponce">
+      </div>
+    </div>
+  </div>
+</section>
 
-							<div class="faq-item">
-								<div class="faq-question">
-									<h3>What should I wear?</h3>
-									<span class="icon solid fa-chevron-down"></span>
-								</div>
-								<div class="faq-answer">
-									<p>Comfortable, athletic clothing that allows for easy movement is recommended. For certain treatments, loose-fitting clothes may be more appropriate.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Questions,<br>answered.</h2>
+      <p>The things most people ask before their first session.</p>
+    </div>
+    <div class="faq-list">
 
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
+      <div class="faq-item">
+        <div class="faq-q"><span><span class="idx">01</span>What should I expect in my first session?</span><span class="toggle">+</span></div>
+        <div class="faq-a"><p>A full assessment of your condition, a review of your medical history, and a conversation about your goals. From there, we build a treatment plan around you.</p></div>
+      </div>
 
-							<header>
-								<h2>Contact</h2>
-							</header>
+      <div class="faq-item">
+        <div class="faq-q"><span><span class="idx">02</span>How long are the sessions?</span><span class="toggle">+</span></div>
+        <div class="faq-a"><p>Initial sessions run 60–90 minutes to leave room for a thorough assessment. Follow-ups are usually 45–60 minutes, depending on your plan.</p></div>
+      </div>
 
-							<p>Thank you for your interest in Healthy Body Rehab's athletic training services! Whether you're an athlete looking for injury prevention, 
-								rehabilitation, or performance enhancement, we are here to help. Fill out the form below, 
-								and we'll get back to you as soon as possible.</p>
-							
-							<p>Let’s work together to keep you strong, healthy, and at the top of your game!</p>
+      <div class="faq-item">
+        <div class="faq-q"><span><span class="idx">03</span>Do I need a referral?</span><span class="toggle">+</span></div>
+        <div class="faq-a"><p>No referral needed. If you're already working with another provider, we're glad to coordinate with them for the best outcome.</p></div>
+      </div>
 
-							<form action="https://formspree.io/f/xzzgbrky" method="post" id="contact" onsubmit="handleSubmit(event)">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
-						</div>
-					</section>
-			</div>
+      <div class="faq-item">
+        <div class="faq-q"><span><span class="idx">04</span>What should I wear?</span><span class="toggle">+</span></div>
+        <div class="faq-a"><p>Comfortable athletic wear that allows a full range of motion. For some treatments, looser clothing works better — we'll let you know ahead of time.</p></div>
+      </div>
 
-		<!-- Footer -->
-			<div id="footer">
+    </div>
+  </div>
+</section>
 
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Healthy Body Rehab. All rights reserved.</li>
-					</ul>
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Let's keep you<br>in the game.</h2>
+      <p class="lead">Whether it's injury prevention, rehab, or performance — tell us where you're starting from, and we'll get back to you shortly.</p>
+      <div class="contact-methods">
+        <a href="https://www.instagram.com/healthybodyrehab/" target="_blank" rel="noopener">Instagram <span class="arrow">→</span></a>
+        <a href="mailto:ayendeetienne@gmail.com">Email <span class="arrow">→</span></a>
+        <a href="https://wa.me/17872381707?text=Hi,%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener">WhatsApp <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 
-			</div>
+<footer>
+  <div class="wrap foot-inner">
+    <span>© <span id="year"></span> Healthy Body Rehab. All rights reserved.</span>
+    <span><a href="privacy.html">Privacy Policy</a> · Designed for athletes, by an athletic trainer.</span>
+  </div>
+</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/slideshow.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/animated.js"></script>
-			<script src="assets/js/faq.js"></script>
-			<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-			<script src="assets/js/particles-config.js"></script>
-			<script>
-				// Clear hash on page load
-				window.addEventListener('load', function() {
-					if (window.location.hash) {
-						setTimeout(function() {
-							window.scrollTo(0, 0);
-							history.replaceState(null, document.title, window.location.pathname);
-						}, 1);
-					}
-				});
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-				// Handle refresh
-				window.addEventListener('beforeunload', function() {
-					history.replaceState(null, document.title, window.location.pathname);
-				});
-			</script>
-			<script>
-			function handleSubmit(event) {
-				event.preventDefault();
-				const form = event.target;
-				const formData = new FormData(form);
-				
-				fetch(form.action, {
-					method: 'POST',
-					body: formData,
-					headers: {
-						'Accept': 'application/json'
-					}
-				})
-				.then(response => {
-					if (response.ok) {
-						window.location.href = 'landing.html';
-					} else {
-						throw new Error('Form submission failed');
-					}
-				})
-				.catch(error => {
-					console.error('Error:', error);
-					alert('There was an error sending your message. Please try again.');
-				});
-			}
-			</script>
-	</body>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  });
+
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(other => {
+        if(other !== item){
+          other.classList.remove('open');
+          other.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        a.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 40 + 'px';
+      }
+    });
+  });
+
+  // Logo marquee: clone the logo set enough times to always cover
+  // (viewport width + one set width), so the loop never runs dry on
+  // wide screens, then drive the animation off the real pixel width
+  // of one set instead of a fixed percentage.
+  (function(){
+    const track = document.getElementById('logoTrack');
+    if(!track) return;
+    const marquee = track.parentElement;
+    const originalHTML = track.innerHTML;
+    let built = false;
+
+    function finishBuild(){
+      if(built) return;
+      built = true;
+      const setWidth = track.scrollWidth;
+      const originals = Array.from(track.children);
+      const targetWidth = marquee.clientWidth + setWidth;
+      let guard = 0;
+      while(track.scrollWidth < targetWidth && guard < 30){
+        originals.forEach(node => track.appendChild(node.cloneNode(true)));
+        guard++;
+      }
+      track.style.setProperty('--set-width', setWidth + 'px');
+    }
+
+    function build(){
+      built = false;
+      track.innerHTML = originalHTML;
+      const imgs = Array.from(track.querySelectorAll('img'));
+      let pending = imgs.filter(img => !img.complete).length;
+      if(pending === 0){
+        finishBuild();
+      } else {
+        imgs.forEach(img => {
+          if(!img.complete){
+            img.addEventListener('load', () => { pending--; if(pending <= 0) finishBuild(); }, {once:true});
+            img.addEventListener('error', () => { pending--; if(pending <= 0) finishBuild(); }, {once:true});
+          }
+        });
+        setTimeout(finishBuild, 800); // fallback in case a load event never fires
+      }
+    }
+
+    build();
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(build, 250);
+    });
+  })();
+</script>
+
+</body>
 </html>
 
 
